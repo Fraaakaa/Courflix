@@ -1,0 +1,69 @@
+$breakpoints:(
+    sm: 425px,
+    md: 768px,
+    lg: 1077px,
+);
+
+@mixin media-up($breakpoint){
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)){
+        @content;
+    }
+}
+
+.infoGrapper{
+    width: 60vw;
+    margin-left: 80px;
+    padding-top: 170px;
+    .subtitle{
+        color: white;
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+    .title{
+        color: white;
+        font-size: 6rem;
+        font-weight: 600;
+        width: 40vh;
+
+    }
+    .containerButton{
+        margin-top: 30px;
+        margin-bottom: 60px;
+        .button{
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.4rem;
+
+            background-color: rgba(157, 151, 151, 0.5);
+            border: none;
+            padding: 25px 40px;
+            border-radius: 10px;
+
+            margin-right: 35px;
+
+            @include media-up(lg){
+                font-size: 1.3rem;
+                padding: 20px 30px;
+            }
+            @include media-up(md){
+                font-size: 1.1rem;
+                padding: 10px 20px;
+            }
+            @include media-up(sm){
+                font-size: 1.2rem;
+                padding: 10px 10px;
+            }
+
+
+        }
+    }
+    .text{
+        color: white;
+        font-size: 1.4rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+        width: 60vh;
+
+    }
+}

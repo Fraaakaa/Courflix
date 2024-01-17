@@ -1,0 +1,32 @@
+$breakpoints:(
+    sm: 390px,
+    md: 616px,
+    lg: 960px,
+);
+
+@mixin media-up($breakpoint){
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)){
+        @content;
+    }
+}
+
+
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .imgcontainer{
+        
+        img{
+            width: 24vw;
+            margin: 0 auto;
+            
+    
+            @include media-up(md){
+            
+            }
+        }
+    }
+    
+}
