@@ -11,7 +11,6 @@ function Content(){
         centerMode: false,
         infinite: true,
         Padding: "150px",
-        responsive: true,
         adaptiveHeight: true,
         slidesToShow: 4,
         speed: 500
